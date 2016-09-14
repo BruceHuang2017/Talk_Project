@@ -38,6 +38,7 @@ public class TalkClient
 		
 		while(true)
 		{
+			// still need to figure out if statement. 
 			if (stdIn.ready()){
 				System.out.println("Server:" + stdIn.readLine());}
 			MyMessage = in.readLine();
