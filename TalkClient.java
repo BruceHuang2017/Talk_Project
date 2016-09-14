@@ -6,9 +6,9 @@ public class TalkClient
 	
 	if (args.length > 0){
 		try{
-			if (args[0] == "Talk-help"){
+			if (args[0].equals("Talk-help")){
 				System.out.println("sorry, no help.");
-			}else if (args[0] == "Talk-h"){
+			}else if (args[0].equals("Talk-h")){
 				System.out.println("Good, Good.");
 			}
 		} catch (Exception e){
@@ -41,8 +41,9 @@ public class TalkClient
 			// still need to figure out if statement. 
 			if (stdIn.ready()){
 				System.out.println("Server:" + stdIn.readLine());}
-			MyMessage = in.readLine();
-			out.println(MyMessage);
+			if (in.ready())
+{MyMessage = in.readLine();
+			out.println(MyMessage);}
 		}
 	} catch (UnknownHostException e) {
 		System.out.println("Unknown host:"+serverName);
