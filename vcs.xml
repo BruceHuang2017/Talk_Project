@@ -22,6 +22,10 @@
           <option name="url" value="git@github.com:StopBadware/webhelp.git" />
           <option name="userName" value="" />
         </UrlAndUserName>
+        <UrlAndUserName>
+          <option name="url" value="https://github.com/BruceHuang2017/Talk_Project.git" />
+          <option name="userName" value="" />
+        </UrlAndUserName>
       </list>
     </option>
     <option name="cloneParentDir" value="$USER_HOME$/Desktop/CN" />
