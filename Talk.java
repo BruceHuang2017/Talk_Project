@@ -6,7 +6,7 @@ public class Talk
         if (args.length > 0){
             try{
                 if (args[0].equals("-help")){
-                    System.out.println("Youpeng Bruce Huang. \n To use this talk program, ");
+                    System.out.println("Youpeng Bruce Huang. \n To use this talk program, you should do this");
                     System.exit(1);
                 }else if (args[0].equals("-h")){
 
