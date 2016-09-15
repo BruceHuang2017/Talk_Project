@@ -1,0 +1,103 @@
+<application>
+  <component name="VimSettings">
+    <state version="4" enabled="true" />
+    <globalmarks />
+    <filemarks>
+      <file name="/Dummy.txt" timestamp="1473902094192">
+        <mark key="[" line="0" column="0" />
+      </file>
+      <file name="/a.dummy" timestamp="1473389589383">
+        <mark key="[" line="0" column="0" />
+      </file>
+      <file name="$USER_HOME$/Desktop/CN/TalkProject/src/TalkClient.java" timestamp="1473914416105">
+        <mark key="'" line="45" column="47" />
+        <mark key="[" line="45" column="50" />
+        <mark key="]" line="45" column="47" />
+        <mark key="^" line="45" column="47" />
+        <mark key="." line="45" column="47" />
+      </file>
+      <file name="$USER_HOME$/IdeaProjects/FirstProject/JavaProject/Lab1.java" timestamp="1472851266795">
+        <mark key="]" line="25" column="0" />
+        <mark key="^" line="25" column="0" />
+        <mark key="." line="25" column="0" />
+      </file>
+      <file name="$USER_HOME$/Desktop/CN/TalkProject/src/Talk.java" timestamp="1473915362024">
+        <mark key="[" line="55" column="41" />
+        <mark key="]" line="108" column="0" />
+        <mark key="^" line="108" column="0" />
+        <mark key="." line="108" column="0" />
+      </file>
+      <file name="$USER_HOME$/TalkProject/TalkServer.java" timestamp="1473891646223">
+        <mark key="[" line="54" column="12" />
+      </file>
+      <file name="$USER_HOME$/Desktop/CN/Project_1/TalkServer.java" timestamp="1473888262113">
+        <mark key="[" line="77" column="24" />
+        <mark key="]" line="85" column="8" />
+        <mark key="^" line="85" column="8" />
+        <mark key="." line="85" column="8" />
+      </file>
+      <file name="$USER_HOME$/Desktop/CN/Project_1/original/TalkServer.java" timestamp="1473900951280">
+        <mark key="[" line="21" column="45" />
+        <mark key="]" line="21" column="44" />
+        <mark key="^" line="21" column="44" />
+        <mark key="." line="21" column="44" />
+      </file>
+      <file name="$USER_HOME$/Desktop/CN/Project_1/TalkClient.java" timestamp="1473888125507">
+        <mark key="[" line="9" column="62" />
+        <mark key="]" line="9" column="64" />
+        <mark key="^" line="9" column="64" />
+        <mark key="." line="9" column="64" />
+      </file>
+      <file name="/fragment.js2" timestamp="1473902264936">
+        <mark key="[" line="0" column="0" />
+      </file>
+      <file name="$USER_HOME$/Desktop/CN/TalkProject/src/TalkServer.java" timestamp="1473914598345">
+        <mark key="[" line="60" column="20" />
+        <mark key="]" line="61" column="16" />
+        <mark key="^" line="61" column="16" />
+        <mark key="." line="61" column="16" />
+      </file>
+      <file name="$USER_HOME$/Desktop/CN/Project_1/original/TalkClient.java" timestamp="1473890998661">
+        <mark key="[" line="60" column="0" />
+        <mark key="]" line="48" column="43" />
+        <mark key="^" line="48" column="43" />
+        <mark key="." line="48" column="43" />
+      </file>
+      <file name="/fragment.java" timestamp="1473915502120">
+        <mark key="[" line="0" column="0" />
+      </file>
+    </filemarks>
+    <jumps>
+      <jump line="45" column="47" filename="$USER_HOME$/Desktop/CN/TalkProject/src/TalkClient.java" />
+    </jumps>
+    <registers>
+      <register name="&quot;" type="4">
+        <text>two</text>
+      </register>
+      <register name=":" type="4">
+        <text>w</text>
+      </register>
+      <register name="-" type="4">
+        <text>two</text>
+      </register>
+    </registers>
+    <search>
+      <last-dir>0</last-dir>
+      <show-last>false</show-last>
+    </search>
+    <history>
+      <history-search />
+      <history-cmd>
+        <entry>set tabstop=4</entry>
+        <entry>wq</entry>
+        <entry>w</entry>
+      </history-cmd>
+      <history-expr />
+      <history-input />
+    </history>
+    <shortcut-conflicts />
+    <editor>
+      <key-repeat enabled="true" />
+    </editor>
+  </component>
+</application>
