@@ -6,14 +6,30 @@ public class Talk
         if (args.length > 0){
             try{
                 if (args[0].equals("-help")){
-                    System.out.println("Youpeng Bruce Huang. \n To use this talk program, you should do this");
+                    System.out.println("Youpeng Bruce Huang. \n To use this talk program, there are three types");
                     System.exit(1);
                 }else if (args[0].equals("-h")){
+                    String serverName;
+                    int serverPortNumber = 16466;
                     if (args[1] != null) {
-
+                        if (args[2] != null) {
+                            serverName = args[1];
+                            try {
+                                serverPortNumber = Integer.parseInt(args[2]);
+                            }catch(Exception e){
+                                System.out.println("Port number input error, has to be integer.");
+                                System.exit(-1);
+                            }
+                        }else {
+                            serverName = "localhost";
+                            try {
+                                serverPortNumber = Integer.parseInt(args[1]);
+                            }catch(Exception e){
+                                System.out.println("Port number input error, has to be integer.");
+                                System.exit(-1);
+                            }
+                        }
                         System.out.println("Starting TalkClient");
-                        String serverName = "localhost";
-                        int serverPortNumber = 16466;
                         String MyMessage;
 
                         try {
@@ -44,68 +60,70 @@ public class Talk
                         }
                     }
                 }else if (args[0].equals("-s")){
+                    int serverPortNumber = 16466;
+                    if (args[1] != null) {
+                        try {
+                            serverPortNumber = Integer.parseInt(args[1]);
+                        }catch(Exception e){
+                            System.out.println("Port number input error, has to be integer.");
+                            System.exit(-1);
+                        }
+                        System.out.println("Starting TalkServer with port number: " + serverPortNumber);
+                        BufferedReader stdIn = null;
+                        BufferedReader in = null;
+                        PrintWriter out = null;
+                        String message;
+                        Socket client = null;
+                        ServerSocket server = null;
 
-                    System.out.println("Starting TalkServer");
-                    BufferedReader stdIn=null;
-                    BufferedReader in=null;
-                    PrintWriter out=null;
-                    int serverPortNumber=16466;
-                    String message;
-                    Socket client=null;
-                    ServerSocket server=null;
+                        try {
+                            server = new ServerSocket(serverPortNumber);
+                            System.out.println("Server listening on port " + serverPortNumber);
+                        } catch (IOException e) {
+                            System.out.println("Could not listen on port " + serverPortNumber);
+                            System.exit(-1);
+                        }
+                        try {
+                            client = server.accept();
+                            System.out.println("Server accepted connection from " + client.getInetAddress());
+                        } catch (IOException e) {
+                            System.out.println("Accept failed on port " + serverPortNumber);
+                            System.exit(-1);
+                        }
+                        try {
+                            stdIn = new BufferedReader(new InputStreamReader(client.getInputStream()));
+                        } catch (IOException e) {
+                            System.out.println("Couldn't get an inputStream from the client");
+                            System.exit(-1);
+                        }
+                        try {
+                            out = new PrintWriter(client.getOutputStream(), true);
+                            in = new BufferedReader(new InputStreamReader(System.in));
+                        } catch (IOException e) {
+                            System.out.println("Couldn't read your input and get socket output");
+                            System.exit(-1);
+                        }
 
-                    try{
-                        server= new ServerSocket(serverPortNumber);
-                        System.out.println("Server listening on port "+serverPortNumber);}
-                    catch (IOException e)
-                    {
-                        System.out.println("Could not listen on port "+serverPortNumber);
-                        System.exit(-1);
-                    }
-                    try{
-                        client=server.accept();
-                        System.out.println("Server accepted connection from "+client.getInetAddress());}
-                    catch (IOException e)
-                    {
-                        System.out.println("Accept failed on port "+ serverPortNumber);
-                        System.exit(-1);
-                    }
-                    try{
-                        stdIn = new BufferedReader(new InputStreamReader(client.getInputStream()));
-                    }
-                    catch (IOException e)
-                    {
-                        System.out.println("Couldn't get an inputStream from the client");
-                        System.exit(-1);
-                    }
-                    try{
-                        out = new PrintWriter(client.getOutputStream(), true);
-                        in=new BufferedReader(new InputStreamReader(System.in));
-                    }
-                    catch (IOException e)
-                    {		System.out.println("Couldn't read your input and get socket output");
-                        System.exit(-1);
-                    }
-
-                    try{
-                        while(true){
-                            if (stdIn.ready()) {
-                                System.out.println("Client:" + stdIn.readLine());}
-                            if (in.ready()) {
-                                message = in.readLine();
-                                if (message.equals("STATUS")) {
-                                    System.out.println("Port number is: " + serverPortNumber);
-                                } else if (message != null) {
-                                    out.println(message);
+                        try {
+                            while (true) {
+                                if (stdIn.ready()) {
+                                    System.out.println("Client:" + stdIn.readLine());
+                                }
+                                if (in.ready()) {
+                                    message = in.readLine();
+                                    if (message.equals("STATUS")) {
+                                        System.out.println("Port number is: " + serverPortNumber);
+                                    } else if (message != null) {
+                                        out.println(message);
+                                    }
                                 }
                             }
-                        }
-                    }
-                    catch (IOException e ) {
-                        System.out.println("Read failed");
-                        System.exit(-1);
+                        } catch (IOException e) {
+                            System.out.println("Read failed");
+                            System.exit(-1);}
                     }
                 }else if (args[0].equals("-a")){
+
 
 
                 }
