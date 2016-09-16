@@ -11,6 +11,7 @@ public class Talk
                 }else if (args[0].equals("-h")){
                     String serverName = "localhost";
                     int serverPortNumber = 16466;
+                    System.out.println("this is the start.");
                     if (args[1] != null) {
                         if (args[2] != null) {
                             serverName = args[1];
@@ -129,6 +130,6 @@ public class Talk
             } catch (Exception e){
                 System.out.println("error.");
             }
-        }
+        }else {System.out.println("Please give me command.");}
     }
 }
