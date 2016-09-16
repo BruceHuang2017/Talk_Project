@@ -113,7 +113,7 @@ public class Talk
                                     message = in.readLine();
                                     if (message.equals("STATUS")) {
                                         System.out.println("Port number is: " + serverPortNumber);
-                                    } else if (message != null) {
+                                    } else {
                                         out.println(message);
                                     }
                                 }
