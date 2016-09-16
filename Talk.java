@@ -46,7 +46,7 @@ public class Talk
                                     MyMessage = in.readLine();
                                     if (MyMessage.equals("STATUS")) {
                                         System.out.println("Host name is: " + serverName + "\n" + "Port number is: " + serverPortNumber);
-                                    } else if (MyMessage != null) {
+                                    } else{
                                         out.println(MyMessage);
                                     }
                                 }
@@ -113,7 +113,7 @@ public class Talk
                                     message = in.readLine();
                                     if (message.equals("STATUS")) {
                                         System.out.println("Port number is: " + serverPortNumber);
-                                    } else if (message != null) {
+                                    } else {
                                         out.println(message);
                                     }
                                 }
