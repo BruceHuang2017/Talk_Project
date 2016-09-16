@@ -9,39 +9,40 @@ public class Talk
                     System.out.println("Youpeng Bruce Huang. \n To use this talk program, you should do this");
                     System.exit(1);
                 }else if (args[0].equals("-h")){
+                    if (args[1] != null) {
 
-                    System.out.println("Starting TalkClient");
-                    String serverName="localhost";
-                    int serverPortNumber=16466;
-                    String MyMessage;
+                        System.out.println("Starting TalkClient");
+                        String serverName = "localhost";
+                        int serverPortNumber = 16466;
+                        String MyMessage;
 
-                    try{
-                        Socket socket = new Socket(serverName, serverPortNumber);
-                        BufferedReader in=new BufferedReader(new InputStreamReader(System.in));
-                        BufferedReader stdIn = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-                        PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
+                        try {
+                            Socket socket = new Socket(serverName, serverPortNumber);
+                            BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+                            BufferedReader stdIn = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+                            PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
 
-                        while(true)
-                        {
-                            if (stdIn.ready()){
-                                System.out.println("Server:" + stdIn.readLine());}
-                            if (in.ready()) {
-                                MyMessage = in.readLine();
-                                if (MyMessage.equals("STATUS")){
-                                    System.out.println("Host name is: " + serverName + "\n" + "Port number is: " + serverPortNumber);
-                                }else if(MyMessage != null){
-                                    out.println(MyMessage);
+                            while (true) {
+                                if (stdIn.ready()) {
+                                    System.out.println("Server:" + stdIn.readLine());
+                                }
+                                if (in.ready()) {
+                                    MyMessage = in.readLine();
+                                    if (MyMessage.equals("STATUS")) {
+                                        System.out.println("Host name is: " + serverName + "\n" + "Port number is: " + serverPortNumber);
+                                    } else if (MyMessage != null) {
+                                        out.println(MyMessage);
+                                    }
                                 }
                             }
+                        } catch (UnknownHostException e) {
+                            System.out.println("Unknown host:" + serverName);
+                            System.exit(1);
+                        } catch (IOException e) {
+                            System.out.println("No I/O");
+                            System.exit(1);
                         }
-                    } catch (UnknownHostException e) {
-                        System.out.println("Unknown host:"+serverName);
-                        System.exit(1);
-                    } catch  (IOException e) {
-                        System.out.println("No I/O");
-                        System.exit(1);
                     }
-
                 }else if (args[0].equals("-s")){
 
                     System.out.println("Starting TalkServer");
@@ -49,7 +50,7 @@ public class Talk
                     BufferedReader in=null;
                     PrintWriter out=null;
                     int serverPortNumber=16466;
-                    String message=null;
+                    String message;
                     Socket client=null;
                     ServerSocket server=null;
 
