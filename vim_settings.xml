@@ -69,8 +69,11 @@
         <mark key="^" line="30" column="24" />
         <mark key="." line="30" column="24" />
       </file>
-      <file name="$USER_HOME$/Desktop/CN/Talk_Project/README.md" timestamp="1474060021585">
+      <file name="$USER_HOME$/Desktop/CN/Talk_Project/README.md" timestamp="1474060125621">
         <mark key="[" line="1" column="0" />
+        <mark key="]" line="0" column="74" />
+        <mark key="^" line="0" column="74" />
+        <mark key="." line="0" column="74" />
       </file>
       <file name="$USER_HOME$/Desktop/CN/Project_1/original/TalkClient.java" timestamp="1473890998661">
         <mark key="[" line="60" column="0" />
@@ -84,7 +87,6 @@
       <file name="/fragment.java" timestamp="1474051695417">
         <mark key="[" line="0" column="0" />
       </file>
-      <file name="$USER_HOME$/Desktop/CN/Talk_Project/TalkClient.java" timestamp="1474055330966" />
     </filemarks>
     <jumps>
       <jump line="45" column="47" filename="$USER_HOME$/Desktop/CN/TalkProject/src/TalkClient.java" />
