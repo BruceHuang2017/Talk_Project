@@ -9,7 +9,7 @@ public class Talk
                     System.out.println("Youpeng Bruce Huang. \n To use this talk program, there are three types");
                     System.exit(1);
                 }else if (args[0].equals("-h")){
-                    String serverName;
+                    String serverName = "localhost";
                     int serverPortNumber = 16466;
                     if (args[1] != null) {
                         if (args[2] != null) {
@@ -21,7 +21,6 @@ public class Talk
                                 System.exit(-1);
                             }
                         }else {
-                            serverName = "localhost";
                             try {
                                 serverPortNumber = Integer.parseInt(args[1]);
                             }catch(Exception e){
