@@ -11,30 +11,25 @@ public class Talk
                 }else if (args[0].equals("-h")){
                     String serverName = "localhost";
                     int serverPortNumber = 16466;
-
                     if (args.length == 1) {
+                        serverName = args[1];
+                    } else if (args.length == 2){
                             try {
-                            serverPortNumber = Integer.parseInt(args[2]);
+                                serverPortNumber = Integer.parseInt(args[2]);
                             } catch (Exception e) {
                                 System.out.println("Port number input error, has to be integer.");
                                 System.exit(-1);
                             }
-                    } else if (args[2].equals("-p")){
-                            serverName = args[1];
-                            try {
-                                serverPortNumber = Integer.parseInt(args[3]);
-                            } catch (Exception e) {
-                                System.out.println("Port number input error, has to be integer.");
-                                System.exit(-1);
-                            }
-                    } else if (args[1].length() == 0) {
-
-                    } else {
-                            System.out.println("good");
-                            serverName = args[1];
+                    } else if (args[1].length() == 3) {
+                        serverName = args[1];
+                        try {
+                            serverPortNumber = Integer.parseInt(args[3]);
+                        } catch (Exception e) {
+                            System.out.println("Port number input error, has to be integer.");
+                            System.exit(-1);
+                        }
                     }
-
-                    System.out.println("Starting TalkClient with port number: " + serverPortNumber);
+                    System.out.println("Starting TalkClient with port number: " + serverPortNumber + "\n" + "Server name is: " + serverName);
                     String MyMessage;
                     try {
                         Socket socket = new Socket(serverName, serverPortNumber);
