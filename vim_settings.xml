@@ -6,8 +6,17 @@
       <file name="/Dummy.txt" timestamp="1474061524837">
         <mark key="[" line="0" column="0" />
       </file>
+      <file name="$USER_HOME$/Desktop/Random/java thread learning/src/Demo.java" timestamp="1474250772387">
+        <mark key="[" line="12" column="26" />
+        <mark key="]" line="12" column="25" />
+        <mark key="^" line="12" column="25" />
+        <mark key="." line="12" column="25" />
+      </file>
       <file name="/a.dummy" timestamp="1473389589383">
         <mark key="[" line="0" column="0" />
+      </file>
+      <file name="$USER_HOME$/Desktop/Random/java thread learning/src/thread.java" timestamp="1474244631808">
+        <mark key="[" line="2" column="2" />
       </file>
       <file name="$USER_HOME$/Desktop/CN/Talk_Project/TalkServer.java" timestamp="1473955759895">
         <mark key="[" line="14" column="29" />
@@ -18,11 +27,6 @@
         <mark key="]" line="45" column="47" />
         <mark key="^" line="45" column="47" />
         <mark key="." line="45" column="47" />
-      </file>
-      <file name="$USER_HOME$/IdeaProjects/FirstProject/JavaProject/Lab1.java" timestamp="1472851266795">
-        <mark key="]" line="25" column="0" />
-        <mark key="^" line="25" column="0" />
-        <mark key="." line="25" column="0" />
       </file>
       <file name="$USER_HOME$/Desktop/CN/TalkProject/src/Talk.java" timestamp="1473915362024">
         <mark key="[" line="55" column="41" />
@@ -93,13 +97,13 @@
     </jumps>
     <registers>
       <register name="&quot;" type="4">
-        <text>two</text>
+        <text>class</text>
       </register>
       <register name=":" type="4">
         <text>w</text>
       </register>
       <register name="-" type="4">
-        <text>two</text>
+        <text>class</text>
       </register>
     </registers>
     <search>
