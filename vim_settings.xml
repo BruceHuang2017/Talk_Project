@@ -3,7 +3,7 @@
     <state version="4" enabled="true" />
     <globalmarks />
     <filemarks>
-      <file name="/Dummy.txt" timestamp="1474308398112">
+      <file name="/Dummy.txt" timestamp="1474309593531">
         <mark key="[" line="0" column="0" />
       </file>
       <file name="$USER_HOME$/Desktop/Random/java thread learning/src/Demo.java" timestamp="1474252336890">
@@ -79,11 +79,11 @@
         <mark key="^" line="61" column="16" />
         <mark key="." line="61" column="16" />
       </file>
-      <file name="$USER_HOME$/Desktop/CN/Talk_Project/Talk.java" timestamp="1474309589790">
-        <mark key="[" line="83" column="87" />
-        <mark key="]" line="10" column="47" />
-        <mark key="^" line="10" column="47" />
-        <mark key="." line="10" column="47" />
+      <file name="$USER_HOME$/Desktop/CN/Talk_Project/Talk.java" timestamp="1474310809478">
+        <mark key="[" line="266" column="8" />
+        <mark key="]" line="265" column="47" />
+        <mark key="^" line="265" column="47" />
+        <mark key="." line="265" column="47" />
       </file>
       <file name="$USER_HOME$/Desktop/CN/Talk_Project/README.md" timestamp="1474060125621">
         <mark key="[" line="1" column="0" />
@@ -108,8 +108,11 @@
       <jump line="45" column="47" filename="$USER_HOME$/Desktop/CN/TalkProject/src/TalkClient.java" />
     </jumps>
     <registers>
-      <register name="&quot;" type="4">
-        <text encoding="base64">ZSA=</text>
+      <register name="0" type="2">
+        <text encoding="base64">Cgo=</text>
+      </register>
+      <register name="&quot;" type="2">
+        <text encoding="base64">Cgo=</text>
       </register>
       <register name=":" type="4">
         <text>w</text>
