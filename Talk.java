@@ -11,14 +11,15 @@ public class Talk
                 }else if (args[0].equals("-h")){
                     String serverName = "localhost";
                     int serverPortNumber = 16466;
-                        if (args[1].equals("-p")) {
+
+                    if (args.length == 1) {
                             try {
                             serverPortNumber = Integer.parseInt(args[2]);
                             } catch (Exception e) {
                                 System.out.println("Port number input error, has to be integer.");
                                 System.exit(-1);
                             }
-                        } else if (args[2].equals("-p")){
+                    } else if (args[2].equals("-p")){
                             serverName = args[1];
                             try {
                                 serverPortNumber = Integer.parseInt(args[3]);
@@ -26,15 +27,14 @@ public class Talk
                                 System.out.println("Port number input error, has to be integer.");
                                 System.exit(-1);
                             }
-                        } else if (!args[1].isEmpty()) {
-                            try {
-                                serverPortNumber = Integer.parseInt(args[1]);
-                            } catch (Exception e) {
-                                System.out.println("Port number input error, has to be integer.");
-                                System.exit(-1);
-                            }
-                        }
-                    System.out.println("Starting TalkClient");
+                    } else if (args[1].length() == 0) {
+
+                    } else {
+                            System.out.println("good");
+                            serverName = args[1];
+                    }
+
+                    System.out.println("Starting TalkClient with port number: " + serverPortNumber);
                     String MyMessage;
                     try {
                         Socket socket = new Socket(serverName, serverPortNumber);
