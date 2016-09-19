@@ -11,27 +11,36 @@ public class Talk
                 }else if (args[0].equals("-h")){
                     String serverName = "localhost";
                     int serverPortNumber = 16466;
-                    // if statement for args analysis. Three options.
-                    if (args.length == 1) {
+                    // if statement for args analysis. Totally four options.
+                    if (args.length == 2) {
                         serverName = args[1];
-                    } else if (args.length == 2){
+                    } else if (args.length == 3){
+                           if (args[1].equals("-p")){
+                               try {
+                                   serverPortNumber = Integer.parseInt(args[2]);
+                               } catch (Exception e) {
+                                   System.out.println("Port number input error, has to be integer.");
+                                   System.exit(-1);
+                               }
+                           } else {
+                               System.out.println("Please types in \'_-p_(portnumber)\' .");
+                               System.exit(-1);
+                           }
+                    } else if (args[1].length() == 4 ) {
+                        if (args[2].equals("-p")) {
+                            serverName = args[1];
                             try {
-                                serverPortNumber = Integer.parseInt(args[2]);
+                                serverPortNumber = Integer.parseInt(args[3]);
                             } catch (Exception e) {
                                 System.out.println("Port number input error, has to be integer.");
                                 System.exit(-1);
                             }
-                    } else if (args[1].length() == 3) {
-                        serverName = args[1];
-                        try {
-                            serverPortNumber = Integer.parseInt(args[3]);
-                        } catch (Exception e) {
-                            System.out.println("Port number input error, has to be integer.");
+                        } else {
+                            System.out.println("Please types in \'(hostname|IPaddress)_-p_(portnumber)\' .");
                             System.exit(-1);
                         }
-                    } else if (args[1].length() == 0) {
-
                     }
+                    //server start.
                     System.out.println("Starting TalkClient with port number: " + serverPortNumber + "\n" + "Server name is: " + serverName);
                     String MyMessage;
                     try {
@@ -61,14 +70,22 @@ public class Talk
                     }
                 } else if (args[0].equals("-s")) {
                     int serverPortNumber = 16466;
-                    if (args.length == 2) {
-                        try {
-                            serverPortNumber = Integer.parseInt(args[1]);
-                        } catch (Exception e) {
-                            System.out.println("Port number input error, has to be integer.");
+                    // if statement check and friendly remind input type.
+                    if (args.length == 3) {
+                        if (args[1].equals("-p"))
+                        {
+                            try {
+                                serverPortNumber = Integer.parseInt(args[1]);
+                            } catch (Exception e) {
+                                System.out.println("Port number input error, has to be integer.");
+                                System.exit(-1);
+                        }
+                        }else {
+                            System.out.println("Please type in \'_-p_(portnumber)\' .");
                             System.exit(-1);
                         }
                     }
+                    //client start.
                     System.out.println("Starting TalkServer with port number: " + serverPortNumber);
                     BufferedReader stdIn = null;
                     BufferedReader in = null;
