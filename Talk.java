@@ -5,7 +5,11 @@ public class Talk {
         if (args.length > 0) {
             try {
                 if (args[0].equals("-help")) {
-                    System.out.println("Youpeng Bruce Huang. \n To use this talk program, there are three types");
+                    System.out.println(
+                            "Youpeng Bruce Huang. \n" +
+                            "To use this talk program, command-line is required. Three are four types of commond-lines: \n" +
+                                    "\"_-h\", \"_-s\", \"_-a\" and \"_-help\"."
+                    );
                     System.exit(1);
                 } else if (args[0].equals("-h")) {
                     String serverName = "localhost";
@@ -26,7 +30,7 @@ public class Talk {
                             System.out.println("Please types in \'_-p_(portnumber)\' .");
                             System.exit(-1);
                         }
-                    } else if (args[1].length() == 4) {
+                    } else if (args.length == 4) {
                         if (args[2].equals("-p")) {
                             serverName = args[1];
                             try {
@@ -42,7 +46,8 @@ public class Talk {
                     }
 
                     /* client start. */
-                    System.out.println("Starting Talk Client with port number: " + serverPortNumber + "\n" + "Server name is: " + serverName);
+                    System.out.println("Starting Talk Client with port number: \"" + serverPortNumber
+                            + "\" and server name: \"" + serverName + "\"");
                     String MyMessage;
                     try {
                         Socket socket = new Socket(serverName, serverPortNumber);
@@ -63,7 +68,7 @@ public class Talk {
                             }
                         }
                     } catch (UnknownHostException e) {
-                        System.out.println("Unknown host:" + serverName);
+                        System.out.println("Unknown host: " + serverName);
                         System.exit(1);
                     } catch (IOException e) {
                         System.out.println("No I/O");
@@ -88,7 +93,7 @@ public class Talk {
                     }
 
                     /* server start. */
-                    System.out.println("Starting Talk Server with port number: " + serverPortNumber);
+                    System.out.println("Starting Talk Server with port number \"" + serverPortNumber + "\"");
                     BufferedReader stdIn = null;
                     BufferedReader in = null;
                     PrintWriter out = null;
@@ -159,7 +164,7 @@ public class Talk {
                             System.out.println("Please types in \'_-p_(portnumber)\' .");
                             System.exit(-1);
                         }
-                    } else if (args[1].length() == 4) {
+                    } else if (args.length == 4) {
                         if (args[2].equals("-p")) {
                             serverName = args[1];
                             try {
@@ -175,7 +180,8 @@ public class Talk {
                     }
 
                     /* try client. */
-                    System.out.println("Starting Talk Client with port number: " + serverPortNumber + "\n" + "Server name is: " + serverName);
+                    System.out.println("Starting Talk Client with port number: \"" + serverPortNumber
+                            + "\" and server name: \"" + serverName + "\"");
                     String MyMessage;
                     try {
                         Socket socket = new Socket(serverName, serverPortNumber);
@@ -263,7 +269,7 @@ public class Talk {
                 System.out.println("Program error.");
             }
         } else {
-            System.out.println("Please give me a command.");
+            System.out.println("Please give me a command. Go for \"_-help\" for more info.");
         }
     }
 }
