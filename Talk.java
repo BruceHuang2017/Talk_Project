@@ -11,6 +11,7 @@ public class Talk
                 }else if (args[0].equals("-h")){
                     String serverName = "localhost";
                     int serverPortNumber = 16466;
+                    // if statement for args analysis. Three options.
                     if (args.length == 1) {
                         serverName = args[1];
                     } else if (args.length == 2){
@@ -28,6 +29,8 @@ public class Talk
                             System.out.println("Port number input error, has to be integer.");
                             System.exit(-1);
                         }
+                    } else if (args[1].length() == 0) {
+
                     }
                     System.out.println("Starting TalkClient with port number: " + serverPortNumber + "\n" + "Server name is: " + serverName);
                     String MyMessage;
@@ -58,7 +61,7 @@ public class Talk
                     }
                 } else if (args[0].equals("-s")) {
                     int serverPortNumber = 16466;
-                    if (args[1] != null) {
+                    if (args.length == 2) {
                         try {
                             serverPortNumber = Integer.parseInt(args[1]);
                         } catch (Exception e) {
