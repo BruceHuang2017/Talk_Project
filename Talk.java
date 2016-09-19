@@ -12,11 +12,17 @@ public class Talk
                     String serverName = "localhost";
                     int serverPortNumber = 16466;
                     System.out.println("this is the start.");
-                    if (args[1] != null) {
-                        if (args[2] != null) {
+                        if (args[1].equals("-p")) {
+                            try {
+                            serverPortNumber = Integer.parseInt(args[2]);
+                            } catch (Exception e) {
+                                System.out.println("Port number input error, has to be integer.");
+                                System.exit(-1);
+                            }
+                        } else if (args[2].equals("-p")){
                             serverName = args[1];
                             try {
-                                serverPortNumber = Integer.parseInt(args[2]);
+                                serverPortNumber = Integer.parseInt(args[3]);
                             } catch (Exception e) {
                                 System.out.println("Port number input error, has to be integer.");
                                 System.exit(-1);
@@ -29,7 +35,6 @@ public class Talk
                                 System.exit(-1);
                             }
                         }
-                    }
                     System.out.println("Starting TalkClient");
                     String MyMessage;
                     try {
