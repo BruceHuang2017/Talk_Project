@@ -11,7 +11,6 @@ public class Talk
                 }else if (args[0].equals("-h")){
                     String serverName = "localhost";
                     int serverPortNumber = 16466;
-                    System.out.println("this is the start.");
                         if (args[1].equals("-p")) {
                             try {
                             serverPortNumber = Integer.parseInt(args[2]);
@@ -27,7 +26,7 @@ public class Talk
                                 System.out.println("Port number input error, has to be integer.");
                                 System.exit(-1);
                             }
-                        } else {
+                        } else if (!args[1].isEmpty()) {
                             try {
                                 serverPortNumber = Integer.parseInt(args[1]);
                             } catch (Exception e) {
