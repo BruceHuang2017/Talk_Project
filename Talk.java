@@ -81,7 +81,7 @@ public class Talk {
                     if (args.length == 3) {
                         if (args[1].equals("-p")) {
                             try {
-                                serverPortNumber = Integer.parseInt(args[1]);
+                                serverPortNumber = Integer.parseInt(args[2]);
                             } catch (Exception e) {
                                 System.out.println("Port number input error, has to be integer.");
                                 System.exit(-1);
