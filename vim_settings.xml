@@ -58,11 +58,11 @@
         <mark key="^" line="85" column="8" />
         <mark key="." line="85" column="8" />
       </file>
-      <file name="$USER_HOME$/Desktop/Random/java thread learning/src/Demo3.java" timestamp="1474253778159">
-        <mark key="[" line="21" column="39" />
-        <mark key="]" line="28" column="7" />
-        <mark key="^" line="28" column="7" />
-        <mark key="." line="28" column="7" />
+      <file name="$USER_HOME$/Desktop/Random/java thread learning/src/Demo3.java" timestamp="1474396926678">
+        <mark key="[" line="36" column="4" />
+        <mark key="]" line="36" column="55" />
+        <mark key="^" line="36" column="55" />
+        <mark key="." line="36" column="55" />
       </file>
       <file name="$USER_HOME$/Desktop/CN/Project_1/original/TalkServer.java" timestamp="1473900951280">
         <mark key="[" line="21" column="45" />
@@ -121,7 +121,7 @@
         <text encoding="base64">Cgo=</text>
       </register>
       <register name=":" type="4">
-        <text>w</text>
+        <text>wq</text>
       </register>
       <register name="-" type="4">
         <text encoding="base64">ZSA=</text>
@@ -135,8 +135,8 @@
       <history-search />
       <history-cmd>
         <entry>set tabstop=4</entry>
-        <entry>wq</entry>
         <entry>w</entry>
+        <entry>wq</entry>
       </history-cmd>
       <history-expr />
       <history-input />
