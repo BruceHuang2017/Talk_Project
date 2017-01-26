@@ -1,0 +1,9 @@
+<toolSet name="External Tools">
+  <tool name="nachos_proj1" showInMainMenu="true" showInEditor="true" showInProject="true" showInSearchPopup="true" disabled="false" useConsole="true" showConsoleOnStdOut="true" showConsoleOnStdErr="true" synchronizeAfterRun="true">
+    <exec>
+      <option name="COMMAND" value="$USER_HOME$/Desktop/OS/nachos2015/src/nachos/proj1/Makefile" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$USER_HOME$/Desktop/OS/nachos2015/src/nachos/proj1" />
+    </exec>
+  </tool>
+</toolSet>
